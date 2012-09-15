@@ -627,7 +627,7 @@ class MainWindowNeo(MainWindow):
         config = self.current_plugin().serialize_parameters()
         f = open(self.remote_script, 'r')
         code = f.read()
-        subprocess.Popen(['python', '-c', '%s' % code,#'start_analysis.py',
+        subprocess.Popen(['python', '-c', '%s' % code,#'spykeview_analysis',
                          type(self.current_plugin()).__name__,
                          self.current_plugin_path(),
                          selections, '-cf', '-c', config])

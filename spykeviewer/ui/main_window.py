@@ -146,7 +146,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 file_path = os.path.abspath(os.path.dirname(__file__))
                 path = os.path.dirname(os.path.dirname(file_path))
                 path = os.path.join(path, 'bin')
-            self.remote_script = os.path.join(path, 'start_analysis.py')
+            self.remote_script = os.path.join(path, 'spykeview_analysis')
         else:
             self.remote_script = settings.value('remoteScript')
 
